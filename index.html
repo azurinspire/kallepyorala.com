@@ -1,196 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Kalle Pyörälä :: Developer</title>
-      <meta name="description" content="">
-      <meta name="keywords" content="">
-      <link href="https://unpkg.com/tailwindcss@next/dist/tailwind.min.css" rel="stylesheet">
-      <!--Replace with your tailwind.css once created-->
-      <style>
-         @import url('https://fonts.googleapis.com/css?family=Lato');
-         html { font-family: 'Lato', sans-serif; }
-         }
-      </style>
-   </head>
-   <body class="bg-gray-100 tracking-wider tracking-normal">
-      <div class="min-h-screen flex flex-col">
-         <nav id="header" class="fixed w-full z-10 top-0 bg-white border-b border-gray-400">
-            <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
-               <div class="pl-4 flex items-center">
-                  <svg class="h-5 pr-3 fill-current text-purple-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                     <path d="M0 2C0 .9.9 0 2 0h16a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm14 12h4V2H2v12h4c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2zM5 9l2-2 2 2 4-4 2 2-6 6-4-4z"/>
-                  </svg>
-                  <a class="text-gray-900 text-base no-underline hover:no-underline font-extrabold text-xl"  href="#">
-                  Kalle Pyörälä
-                  </a>
-               </div>
-               <div class="block lg:hidden pr-4">
-                  <button id="nav-toggle" class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-purple-500 appearance-none focus:outline-none">
-                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <title>Menu</title>
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/>
-                     </svg>
-                  </button>
-               </div>
-               <div class="w-full flex-grow lg:flex  lg:content-center lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
-                  <div class="flex-1 w-full mx-auto max-w-sm content-center py-4 lg:py-0">
-                     <div class="relative pull-right pl-4 pr-4 md:pr-0 hidden">
-                        <input type="search" placeholder="Search" class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-purple-500 rounded py-1 px-2 pl-10 appearance-none leading-normal">
-                        <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
-                           <svg class="fill-current pointer-events-none text-gray-800 w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                              <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
-                           </svg>
-                        </div>
-                     </div>
-                  </div>
-                  <ul class="list-reset lg:flex justify-end items-center">
-                     <li class="mr-3 py-2 lg:py-0">
-                        <a class="inline-block py-2 px-4 text-gray-900 font-bold no-underline" href="/">kallepyorala.com</a>
-                     </li>
-                     <li class="mr-3 py-2 lg:py-0">
-                        <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-2 px-4" href="https://www.azurinspire.com">azurinspire.com</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-         </nav>
-         <!--Container-->
-         <div class="container w-full flex flex-wrap mx-auto px-2 pt-8 lg:pt-16 mt-16 flex-1">
-            <div class="w-full lg:w-1/5 lg:px-6 text-xl text-gray-800 leading-normal">
-               <p class="text-base font-bold py-2 lg:pb-6 text-gray-700">Menu</p>
-               <div class="block lg:hidden sticky inset-0">
-                  <button id="menu-toggle" class="flex w-full justify-end px-3 py-3 bg-white lg:bg-transparent border rounded border-gray-600 hover:border-purple-500 appearance-none focus:outline-none">
-                     <svg class="fill-current h-3 float-right" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                     </svg>
-                  </button>
-               </div>
-               <div class="w-full sticky inset-0 hidden h-64 lg:h-auto overflow-x-hidden overflow-y-auto lg:overflow-y-hidden lg:block mt-0 border border-gray-400 lg:border-transparent bg-white shadow lg:shadow-none lg:bg-transparent z-20" style="top:5em;" id="menu-content">
-                  <ul class="list-reset">
-                     <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
-                        <a href="#" class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:border-purple-500 lg:hover:border-purple-500">
-                        <span class="pb-1 md:pb-0 text-sm text-gray-900 font-bold">Blog</span>
-                        </a>
-                     </li>
-                     <!--
-                     <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
-                        <a href="#" class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
-                        <span class="pb-1 md:pb-0 text-sm">Open source</span>
-                        </a>
-                     </li>
-                     <li class="py-2 md:my-0 hover:bg-purple-100 lg:hover:bg-transparent">
-                        <a href="#" class="block pl-4 align-middle text-gray-700 no-underline hover:text-purple-500 border-l-4 border-transparent lg:hover:border-gray-400">
-                        <span class="pb-1 md:pb-0 text-sm">Links</span>
-                        </a>
-                     </li>
-                     -->
-                  </ul>
-               </div>
-            </div>
-            <div class="w-full lg:w-4/5 p-8 mt-6 lg:mt-0 text-gray-900 leading-normal bg-white border border-gray-400 border-rounded mb-8">
+---
+layout: default
+title: A stunning personal blog Jekyll theme
+description: Journal is a stunning personal blog Jekyll theme with an image-focused design.
+featured_image: /images/kallepyorala/portrait-bg.jpg
+---
 
-               <div class="font-sans">
-                  <h1 class="font-sans break-normal text-gray-900 pt-6 pb-2 text-xl">Welcome</h1>
-                  <hr class="border-b border-gray-400">
-               </div>
+<section class="blog single">
 
-               <p class="py-6">
-                  Nothing to see here yet, but it's going to change soooooon!
-               </p>
+	<div class="wrap">
 
-            </div>
-         </div>
-         <!--/container-->
-         <footer class="bg-white border-t border-gray-400 shadow">
-            <div class="container mx-auto flex py-8">
-               <div class="w-full mx-auto flex flex-wrap">
-                  <div class="flex w-full lg:w-1/2 ">
-                     <div class="px-8">
-                        <h3 class="font-bold text-gray-900">About</h3>
-                        <p class="py-4 text-gray-600 text-sm">
-                           Passionant developer in <a class="text-purple-500" href="https://www.redicom.fi">Redicom</a> - Laravel, VueJS, Tailwind CSS, React Native, PostgreSQL.
-                        </p>
-                        <p class="py-4 -mt-4 text-gray-600 text-sm">
-                           When not in development mode, most probably <a class="text-purple-500" href="https://www.azurinspire.com">gone hiking with my camera</a>.
-                        </p>
-                     </div>
-                  </div>
-                  <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                     <div class="px-8">
-                        <h3 class="font-bold text-gray-900">Links</h3>
-                        <ul class="list-reset items-center text-sm pt-3">
-                           <li>
-                              <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://www.github.com/azurinspire">GitHub</a>
-                           </li>
-                           <li>
-                              <a class="inline-block text-gray-600 no-underline hover:text-gray-900 hover:underline py-1" href="https://www.twitter.com/kallepyorala">Twitter</a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </footer>
-      </div>
-      <script></script>
-      <script>
-         /*Toggle dropdown list*/
-         /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+		{% for post in paginator.posts %}
 
-         var navMenuDiv = document.getElementById("nav-content");
-         var navMenu = document.getElementById("nav-toggle");
+		<article class="blog-post">
 
-         var helpMenuDiv = document.getElementById("menu-content");
-         var helpMenu = document.getElementById("menu-toggle");
+			<div class="blog-post__header">
+				<h2 class="blog-post__title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+				<p class="blog-post__subtitle">{{ post.date | date_to_long_string }}</p>
+			</div>
 
-         document.onclick = check;
+			{% if post.featured_image %}
+			<a href="{{ post.url }}" class="blog-post__image" style="background-image: url({{ post.featured_image  }});"></a>
+			{% endif %}
 
-         function check(e){
-           var target = (e && e.target) || (event && event.srcElement);
+			<div class="blog-post__content">
+				<p>{{ post.excerpt }}</p>
+				<p><a href="{{ post.url }}" class="button">Read More</a>
+			</div>
 
+		</article>
 
-           //Nav Menu
-           if (!checkParent(target, navMenuDiv)) {
-         	// click NOT on the menu
-         	if (checkParent(target, navMenu)) {
-         	  // click on the link
-         	  if (navMenuDiv.classList.contains("hidden")) {
-         		navMenuDiv.classList.remove("hidden");
-         	  } else {navMenuDiv.classList.add("hidden");}
-         	} else {
-         	  // click both outside link and outside menu, hide menu
-         	  navMenuDiv.classList.add("hidden");
-         	}
-           }
+		{% endfor %}
 
-           //Help Menu
-           if (!checkParent(target, helpMenuDiv)) {
-         	// click NOT on the menu
-         	if (checkParent(target, helpMenu)) {
-         	  // click on the link
-         	  if (helpMenuDiv.classList.contains("hidden")) {
-         		helpMenuDiv.classList.remove("hidden");
-         	  } else {helpMenuDiv.classList.add("hidden");}
-         	} else {
-         	  // click both outside link and outside menu, hide menu
-         	  helpMenuDiv.classList.add("hidden");
-         	}
-           }
+	</div>
 
-         }
+</section>
 
-         function checkParent(t, elm) {
-           while(t.parentNode) {
-         	if( t == elm ) {return true;}
-         	t = t.parentNode;
-           }
-           return false;
-         }
+{% if paginator.total_pages > 1 %}
 
+<section class="pagination">
 
-      </script>
-   </body>
-</html>
+	{% if paginator.previous_page %}
+	<div class="pagination__prev">
+		<a href="{{ paginator.previous_page_path | prepend: site.baseurl }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
+	</div>
+	{% endif %}
+	{% if paginator.next_page %}
+	<div class="pagination__next">
+		<a href="{{ paginator.next_page_path | prepend: site.baseurl }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	</div>
+	{% endif %}
+
+</section>
+
+{% endif %}
