@@ -3,6 +3,7 @@ title: 'New identity, new layout and new platform'
 date: 2019-07-12 00:00:00
 featured_image: '/images/kallepyorala/posts/2019-07-12/AZURINSPIRE_20190524_FRA_25984.jpg'
 excerpt: AzurInspire is gone, Kalle Pyörälä is here. I have made little change to my online presence, find out more in this post.
+comments: true
 ---
 
 ## New indentity
