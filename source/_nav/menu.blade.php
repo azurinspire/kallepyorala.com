@@ -2,7 +2,9 @@
     <div id="vue-search" class="container mx-auto flex items-center justify-between">
         @if (isset($logo))
             <div>
-                <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-48" />
+                <a href="/">
+                    <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-48" />
+                </a>
             </div>
         @endif
         <!-- site menu -->
