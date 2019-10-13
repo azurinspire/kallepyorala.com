@@ -1,18 +1,23 @@
-<div class="flex justify-center lg:-mx-12 my-12 p-6 md:px-12 bg-gray-200 border border-gray-400 text-sm md:rounded shadow">
+<div class="w-full flex justify-center {{ isset($cover) ? 'lg:mx-6' : '' }} my-12 p-6 md:px-12 bg-green-100 border border-gray-400 text-sm md:rounded shadow">
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
-        <form action="https://your-mail-chimp-list-manage-url" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <form action="https://kallepyorala.us20.list-manage.com/subscribe/post?u=0d1d9750d7dd99e79160cfb38&amp;id=23b20f76bd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input type="hidden" value="2" name="group[4475][2]" id="mce-group[4475]-4475-1">
             <div id="mc_embed_signup_scroll">
-                <h2>Sign up for our newsletter</h2>
+                <h2>Sign up for monthly newsletter</h2>
+                <p>Every month I send an email about interesting things in photography for the moment. Sign up and keep learning!</p>
+
+                <div id="mce-responses" class="clear">
+                    <div class="response mb-4 text-red-500 px-4 py-2 border border-red-500 rounded bg-red-100" id="mce-error-response" style="display:none"></div>
+                    <div class="response mb-4 text-green-500 px-4 py-2 border border-green-500 rounded bg-green-100" id="mce-success-response" style="display:none"></div>
+                </div>
+
                 <div class="mc-field-group">
                     <label for="mce-EMAIL">Email Address </label>
                     <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
                 </div>
-                <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none"></div>
-                    <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_25582686a9fc051afd5453557_189578c854" tabindex="-1" value=""></div>
                 <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
             </div>

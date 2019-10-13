@@ -10,11 +10,8 @@
 @section('body')
 <h1>Contact</h1>
 
-<p class="mb-8">
-    Static sites are unable to handle form submissions. However, there are third-party services, like Tighten’s <a href="https://fieldgoal.io" title="FieldGoal">FieldGoal</a>, which can accept the form submission, email you the result, and redirect back to a thank you page.
-</p>
-
-<form action="/contact" class="mb-12">
+<form name="contact" class="mb-12" data-netlify="true">
+    <input type="hidden" name="source" value="kallepyorala.com">
     <div class="flex flex-wrap mb-6 -mx-3">
         <div class="w-full md:w-1/2 mb-6 md:mb-0 px-3">
             <label class="block mb-2 text-gray-800 text-sm font-semibold" for="contact-name">
@@ -57,7 +54,7 @@
             rows="4"
             name="message"
             class="block w-full border shadow rounded-lg outline-none appearance-none mb-2 px-4 py-3"
-            placeholder="A lovely message here."
+            placeholder="Your question or proposition"
             required
         ></textarea>
     </div>
@@ -66,7 +63,7 @@
         <input
             type="submit"
             value="Submit"
-            class="block bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
+            class="block bg-green-500 hover:bg-green-600 text-white text-sm font-semibold leading-snug tracking-wide uppercase shadow rounded-lg cursor-pointer px-6 py-3"
         >
     </div>
 </form>

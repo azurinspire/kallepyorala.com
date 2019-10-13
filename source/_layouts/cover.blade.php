@@ -28,22 +28,29 @@
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
     </head>
 
-    <body class="bg-green-100 font-sans leading-normal tracking-normal">
-        <div class="min-h-screen flex flex-col pt-16">
-            <div class="bg-gray-900 mt-0 w-full fixed -mt-16">
-                <div class="max-w-6xl px-6 mx-auto flex items-center">
-                    @include('_nav.menu', ['logo' => true])
-                </div>
+    <body class="font-sans bg-green-100 leading-normal tracking-normal">
+        <div class="w-full m-0 p-0 bg-auto bg-center" style="background-image:url('/assets/img/cover.jpg'); height: 60vh; max-height:460px;">
+            <div class="container max-w-4xl mx-auto pt-16 md:pt-32 flex flex-col items-center break-normal">
+                <!--Title-->
+                <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-1/2" />
             </div>
-
-            @yield('cover_image')
-
-            <main role="main" class="flex-1 max-w-6xl mx-auto px-6 my-6 bg-green-100 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
-                @yield('body')
-            </main>
-
-            @include('_layouts.footer')
-            @stack('scripts')
         </div>
+
+        <!-- container -->
+        <div class="container px-4 md:px-0 max-w-6xl mx-auto -mt-32">
+            <div class="mx-0 sm:mx-6">
+                <!--Nav-->
+                @include('_nav.menu')
+                @include('_nav.menu-toggle')
+                @include('_nav.menu-responsive')
+                <!-- main -->
+                <main role="main" class="bg-green-100 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
+                    @yield('body')
+                </main>
+            </div>
+        </div>
+
+        @include('_layouts.footer')
+        @stack('scripts')
     </body>
 </html>

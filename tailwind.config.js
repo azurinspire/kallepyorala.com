@@ -2,16 +2,12 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Nunito Sans'
-        ],
-        mono: [
-          'monospace',
-        ],
+        sans: ['Nunito Sans'],
+        mono: ['monospace']
       },
       lineHeight: {
         normal: '1.6',
-        loose: '1.75',
+        loose: '1.75'
       },
       maxWidth: {
         none: 'none',
@@ -23,21 +19,28 @@ module.exports = {
         '9': '2.25rem'
       },
       boxShadow: {
-        'lg': '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)',
+        lg: '0 -1px 27px 0 rgba(0, 0, 0, 0.04), 0 4px 15px 0 rgba(0, 0, 0, 0.08)'
+      },
+      colors: {
+        'green-500': '#47b82c',
+        'green-400': '#a4c39c',
+        'green-300': '#bed6b9',
+        'green-200': '#d4e5d0',
+        'green-100': '#ebf3e9'
       }
     },
     fontSize: {
-      'xs': '.8rem',
-      'sm': '.925rem',
-      'base': '1rem',
-      'lg': '1.125rem',
-      'xl': '1.25rem',
+      xs: '.8rem',
+      sm: '.925rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.75rem',
       '4xl': '2.125rem',
       '5xl': '2.625rem',
-      '6xl': '10rem',
-    },
+      '6xl': '10rem'
+    }
   },
   variants: {
     borderRadius: ['responsive', 'focus'],
@@ -48,13 +51,13 @@ module.exports = {
     function({ addUtilities }) {
       const newUtilities = {
         '.transition-fast': {
-          transition: 'all .2s ease-out',
+          transition: 'all .2s ease-out'
         },
         '.transition': {
-          transition: 'all .5s ease-out',
-        },
-      }
-      addUtilities(newUtilities)
+          transition: 'all .5s ease-out'
+        }
+      };
+      addUtilities(newUtilities);
     }
   ]
-}
+};

@@ -1,13 +1,13 @@
 ---
 extends: _layouts.post
 section: content
-title: Customizing Your Site
-date: 2018-12-24
+title: No Poks
+date: 2018-12-27
 description: Customize your site with CSS and JS
-categories: [configuration]
-cover_image: https://live.staticflickr.com/4823/39889656663_45e23e8898_h.jpg
+categories: [landscape,wildlife,macro,b&w]
 featured: true
 excerpt: This starter template comes pre-loaded with Tailwind CSS, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS.
+cover_image: https://live.staticflickr.com/65535/48234591986_5b563d6d27_h.jpg
 ---
 
 This starter template comes pre-loaded with [Tailwind CSS](https://tailwindcss.com), a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS. There are also a few base Sass files in the `/source/_assets/sass` folder, set up with the expectation that you can add any custom CSS into `_blog.scss`.

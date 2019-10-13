@@ -15,13 +15,13 @@ pagination:
 @section('body')
     <h1>Blog</h1>
 
-    <hr class="border-b my-6">
+    <hr class="border-b border-green-200 my-6">
 
     @foreach ($pagination->items as $post)
         @include('_components.post-preview-inline')
 
         @if ($post != $pagination->items->last())
-            <hr class="border-b my-6">
+            <hr class="border-b border-green-200 my-6">
         @endif
     @endforeach
 
@@ -31,7 +31,7 @@ pagination:
                 <a
                     href="{{ $previous }}"
                     title="Previous Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
+                    class="bg-green-200 hover:bg-green-400 rounded mr-3 px-5 py-3"
                 >&LeftArrow;</a>
             @endif
 
@@ -39,7 +39,7 @@ pagination:
                 <a
                     href="{{ $path }}"
                     title="Go to Page {{ $pageNumber }}"
-                    class="bg-gray-200 hover:bg-gray-400 text-blue-700 rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'text-blue-600' : '' }}"
+                    class=" hover:bg-green-400  rounded mr-3 px-5 py-3 {{ $pagination->currentPage == $pageNumber ? 'bg-green-100 text-green-500' : 'bg-green-200 text-green-700' }}"
                 >{{ $pageNumber }}</a>
             @endforeach
 
@@ -47,7 +47,7 @@ pagination:
                 <a
                     href="{{ $next }}"
                     title="Next Page"
-                    class="bg-gray-200 hover:bg-gray-400 rounded mr-3 px-5 py-3"
+                    class="bg-green-200 hover:bg-green-400 rounded mr-3 px-5 py-3"
                 >&RightArrow;</a>
             @endif
         </nav>

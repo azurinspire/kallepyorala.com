@@ -1,16 +1,20 @@
-<nav class="hidden lg:flex items-center justify-end text-lg">
-    <a title="{{ $page->siteName }} Blog" href="/blog"
-        class="ml-6 text-gray-700 hover:text-blue-600 {{ $page->isActive('/blog') ? 'active text-blue-600' : '' }}">
-        Blog
-    </a>
+<nav class="mt-0 w-full">
+    <div id="vue-search" class="container mx-auto flex items-center justify-between">
+        @if (isset($logo))
+            <div>
+                <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-48" />
+            </div>
+        @endif
+        <!-- site menu -->
+        <div class="flex pl-4 text-sm">
+            <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+                @include('_nav.items')
+            </ul>
+        </div>
 
-    <a title="{{ $page->siteName }} About" href="/about"
-        class="ml-6 text-gray-700 hover:text-blue-600 {{ $page->isActive('/about') ? 'active text-blue-600' : '' }}">
-        About
-    </a>
+        <!--<search></search>-->
 
-    <a title="{{ $page->siteName }} Contact" href="/contact"
-        class="ml-6 text-gray-700 hover:text-blue-600 {{ $page->isActive('/contact') ? 'active text-blue-600' : '' }}">
-        Contact
-    </a>
+        <!-- external links -->
+        @include('_nav.external')
+    </div>
 </nav>
