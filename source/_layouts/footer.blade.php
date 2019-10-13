@@ -1,17 +1,18 @@
 <footer class="bg-gray-900">
     <div class="container max-w-6xl mx-auto px-6 py-8">
-        <div class="flex justify-between">
-            <div class="flex items-center">
-                <a class="text-gray-900 no-underline hover:text-gray-900 hover:no-underline" href="#">
-                    <span class="text-base text-gray-200 font-light">&copy; Kalle Pyörälä {{ date('Y') }}</span>
-                </a>
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="flex justify-center lg:items-center">
+                <span class="text-base text-gray-200 font-light">&copy; Kalle Pyörälä {{ date('Y') }}</span>
             </div>
-            @include('_nav.external')
+            <div class="lg:mt-2">
+                @include('_nav.external')
+            </div>
             <div>
-                <ul class="list-reset flex justify-center flex-1 md:flex-none items-center">
+                <ul class="list-reset justify-center flex-1 lg:flex items-center">
                     @include('_nav.items')
                 </ul>
             </div>
+            @include('_nav.external', ['alwaysVisible' => true])
         </div>
     </div>
 </footer>

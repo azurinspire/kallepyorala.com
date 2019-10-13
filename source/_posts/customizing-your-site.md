@@ -2,11 +2,10 @@
 extends: _layouts.post
 section: content
 title: Customizing Your Site
-date: 2018-12-24
+date: 2019-12-24
 description: Customize your site with CSS and JS
 categories: [configuration]
 cover_image: https://live.staticflickr.com/4823/39889656663_45e23e8898_h.jpg
-featured: true
 excerpt: This starter template comes pre-loaded with Tailwind CSS, a utility CSS framework that allows you to customize and build complex designs without touching a line of CSS.
 ---
 

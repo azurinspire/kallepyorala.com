@@ -899,7 +899,6 @@ pre code {
 }
 
 .nav-menu {
-  background-color: #edf2f7;
   padding-bottom: 0.5rem;
   padding-top: 1.5rem;
   padding-left: 0.5rem;
@@ -915,6 +914,12 @@ pre code {
   margin-top: 0;
   color: #2d3748;
   font-size: .925rem;
+}
+
+@media (max-width: 1024px) {
+  #cover-image {
+    background-position-x: 17%;
+  }
 }
 
 #mc_embed_signup {

@@ -2,10 +2,10 @@
 
 @section('body')
     @php
-        $lastPost = $posts->last();
+        $lastPost = $posts->first();
     @endphp
     <!--Lead Card-->
-    <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
+    <div class="flex flex-col lg:flex-row h-full bg-white rounded overflow-hidden shadow-lg">
 
             <div class="w-full md:w-2/3 rounded-t">
                 @if ($lastPost->cover_image)
@@ -37,7 +37,7 @@
                                         <a
                                             href="{{ '/blog/categories/' . $category }}"
                                             title="View posts in {{ $category }}"
-                                            class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                                            class="inline-block bg-green-200 hover:bg-green-300 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
                                         >{{ $category }}</a>
                                     @endif
                                 @endforeach
@@ -52,9 +52,9 @@
     <!--/Lead Card-->
 
     <!--Posts Container-->
-    <div class="flex flex-wrap justify-between pt-12 -mx-6">
+    <div class="flex flex-wrap justify-between pt-12 lg:-mx-6">
         @foreach ($posts->where('featured', true) as $featuredPost)
-            <div class="w-full {{$loop->iteration > 2 ? 'md:w-1/3' : 'md:w-1/2' }} p-6 flex flex-col flex-grow flex-shrink">
+            <div class="w-full {{$loop->iteration > 2 ? 'md:w-1/3' : 'md:w-1/2' }} mb-6 lg:mb-0 lg:p-6 flex flex-col flex-grow flex-shrink">
                 <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                     <a href="{{ $featuredPost->getUrl() }}" class="flex flex-wrap no-underline hover:no-underline">
                         <div class="h-64 relative rounded-t w-full">
@@ -81,7 +81,7 @@
                                         <a
                                             href="{{ '/blog/categories/' . $category }}"
                                             title="View posts in {{ $category }}"
-                                            class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                                            class="{{ $loop->iteration > 2 ? 'hidden lg:inline-block' : '' }} bg-green-200 hover:bg-green-300 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
                                         >{{ $category }}</a>
                                     @endif
                                 @endforeach
@@ -99,7 +99,7 @@
         @foreach ($posts->where('featured', false)->take(4)->chunk(2) as $row)
 
             @foreach ($row as $post)
-                <div class="w-full {{($loop->parent->even && $loop->even) || ($loop->parent->odd && $loop->odd)  ? 'md:w-1/3' : 'md:w-2/3' }} p-6 flex flex-col flex-grow flex-shrink">
+                <div class="w-full {{($loop->parent->even && $loop->even) || ($loop->parent->odd && $loop->odd)  ? 'md:w-1/3' : 'md:w-2/3' }} mb-6 lg:mb-0 lg:p-6 flex flex-col flex-grow flex-shrink">
                     <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                         <a href="{{ $post->getUrl() }}" class="flex flex-wrap no-underline hover:no-underline">
                             <div class="h-64 relative rounded-t w-full">
@@ -126,7 +126,7 @@
                                             <a
                                                 href="{{ '/blog/categories/' . $category }}"
                                                 title="View posts in {{ $category }}"
-                                                class="inline-block bg-gray-300 hover:bg-blue-200 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                                                class="inline-block bg-green-200 hover:bg-green-300 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
                                             >{{ $category }}</a>
                                         @endif
                                     @endforeach

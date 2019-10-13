@@ -29,8 +29,8 @@
     </head>
 
     <body class="bg-green-100 font-sans leading-normal tracking-normal">
-        <div class="min-h-screen flex flex-col pt-16">
-            <div class="bg-gray-900 mt-0 w-full fixed -mt-16">
+        <div class="min-h-screen flex flex-col pt-12 lg:pt-16">
+            <div class="bg-gray-900 mt-0 w-full fixed -mt-12 lg:-mt-16">
                 <div class="max-w-6xl px-6 mx-auto flex items-center">
                     @include('_nav.menu', ['logo' => true])
                 </div>

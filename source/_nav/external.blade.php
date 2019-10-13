@@ -1,4 +1,4 @@
-<div class="flex items-center">
+<div class="flex {{ isset($alwaysVisible) ? 'block justify-center lg:hidden' : 'items-center hidden' }} lg:block">
     <a class="inline-block text-green-200 no-underline hover:text-white hover:text-underline text-center h-10 p-2 md:h-auto md:p-4 tippy" data-tippy-content="Twitter: @kallepyorala" href="https://twitter.com/kallepyorala">
         <i class="fab fa-twitter"></i>
     </a>

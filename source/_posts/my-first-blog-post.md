@@ -6,6 +6,7 @@ date: 2017-03-23
 description: This is your first blog post.
 cover_image: https://live.staticflickr.com/65535/48305235041_cf2939dcf3_h.jpg
 categories: [landscape,wildlife,macro,b&w]
+featured: true
 gallery: [[
     'https://live.staticflickr.com/65535/48305235041_cf2939dcf3_h.jpg',
     'https://live.staticflickr.com/65535/48305235041_a77f422258_n.jpg'

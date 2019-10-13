@@ -23,7 +23,7 @@
             <a
                 href="{{ '/blog/categories/' . $category }}"
                 title="View posts in {{ $category }}"
-                class="inline-block bg-green-200 hover:bg-green-300 leading-loose tracking-wide text-green-500 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
+                class="inline-block bg-green-200 hover:bg-green-300 leading-loose tracking-wide text-gray-800 uppercase text-xs font-semibold rounded mr-4 px-3 pt-px"
             >{{ $category }}</a>
         @endforeach
     @endif
