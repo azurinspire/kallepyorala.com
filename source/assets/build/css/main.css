@@ -12202,6 +12202,10 @@ pre code {
   width: 16rem;
 }
 
+.w-96{
+  width: 24rem;
+}
+
 .w-auto{
   width: auto;
 }
@@ -12400,6 +12404,10 @@ pre code {
 
 .focus\:w-64:focus{
   width: 16rem;
+}
+
+.focus\:w-96:focus{
+  width: 24rem;
 }
 
 .focus\:w-auto:focus{
@@ -23753,6 +23761,10 @@ pre code {
     width: 16rem;
   }
 
+  .sm\:w-96{
+    width: 24rem;
+  }
+
   .sm\:w-auto{
     width: auto;
   }
@@ -23951,6 +23963,10 @@ pre code {
 
   .sm\:focus\:w-64:focus{
     width: 16rem;
+  }
+
+  .sm\:focus\:w-96:focus{
+    width: 24rem;
   }
 
   .sm\:focus\:w-auto:focus{
@@ -35297,6 +35313,10 @@ pre code {
     width: 16rem;
   }
 
+  .md\:w-96{
+    width: 24rem;
+  }
+
   .md\:w-auto{
     width: auto;
   }
@@ -35495,6 +35515,10 @@ pre code {
 
   .md\:focus\:w-64:focus{
     width: 16rem;
+  }
+
+  .md\:focus\:w-96:focus{
+    width: 24rem;
   }
 
   .md\:focus\:w-auto:focus{
@@ -46841,6 +46865,10 @@ pre code {
     width: 16rem;
   }
 
+  .lg\:w-96{
+    width: 24rem;
+  }
+
   .lg\:w-auto{
     width: auto;
   }
@@ -47039,6 +47067,10 @@ pre code {
 
   .lg\:focus\:w-64:focus{
     width: 16rem;
+  }
+
+  .lg\:focus\:w-96:focus{
+    width: 24rem;
   }
 
   .lg\:focus\:w-auto:focus{
@@ -58385,6 +58417,10 @@ pre code {
     width: 16rem;
   }
 
+  .xl\:w-96{
+    width: 24rem;
+  }
+
   .xl\:w-auto{
     width: auto;
   }
@@ -58583,6 +58619,10 @@ pre code {
 
   .xl\:focus\:w-64:focus{
     width: 16rem;
+  }
+
+  .xl\:focus\:w-96:focus{
+    width: 24rem;
   }
 
   .xl\:focus\:w-auto:focus{

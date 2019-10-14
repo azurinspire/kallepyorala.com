@@ -14,6 +14,9 @@ module.exports = {
         '7xl': '80rem',
         '8xl': '88rem'
       },
+      width: {
+        '96': '24rem'
+      },
       spacing: {
         '7': '1.75rem',
         '9': '2.25rem'

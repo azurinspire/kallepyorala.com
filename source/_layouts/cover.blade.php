@@ -30,9 +30,10 @@
 
     <body class="font-sans bg-green-100 leading-normal tracking-normal">
         <div id="cover-image" class="w-full m-0 p-0 bg-auto bg-center" style="background-image:url('/assets/img/cover.jpg'); background-repeat: no-repeat; background-size: cover; height: 60vh; max-height:460px;">
-            <div class="container max-w-4xl mx-auto pt-16 flex flex-col items-center break-normal">
+            <div class="container mx-auto h-full flex items-start justify-center pt-16 lg:pt-0 lg:items-center lg:justify-end">
                 <!--Title-->
-                <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-3/4 lg:w-1/2" />
+                <img src="/assets/img/kalle.pyorala.svg" alt="{{ $page->siteName }} - {{ $page->siteDescription }}" class="w-3/4 lg:w-96" />
+                <div class="lg:w-96"></div>
             </div>
         </div>
 
